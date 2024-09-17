@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://drive.google.com/file/d/1Qt8qbOhTmJNkD0d-_crBhDNQS-Z_13HW/view?usp=drive_link');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .left-side {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-right: 20px;
+        }
+
+        .description {
+            position: relative;
+            width: 90%;
+            background: rgba(27, 94, 32, 0.8);
+            color: white;
+            padding: 30px;
+            padding-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: auto;
+            border: 5px solid white;
+            border-radius: 8px;
+            background: #1B5E20;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .contact-form {
+            width: 90%;
+            background: rgba(27, 94, 32, 0.8);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .contact-form h2 {
+            margin-top: 0;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .video-container {
+            position: relative;
+            width: 60%;
+            padding-bottom: 48%;
+            height: 0;
+            overflow: hidden;
+            border: 5px solid #007bff;
+            border-radius: 8px;
+            background: #000;
+            transition: border-width 0.3s;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .whatsapp-link {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+        }
+
+        .ticker {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            white-space: nowrap;
+            box-sizing: border-box;
+            color: #ffffff;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            padding-left: 100%;
+            color: #ffffff;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side {
+                margin-right: 0;
+            }
+
+            .video-container {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-link {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .whatsapp-link {
+                font-size: 10px;
+                padding: 6px;
+                bottom: 5px;
+                right: 5px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="description">
+                <img src="https://drive.google.com/file/d/1ZRj5hV8ODYHvkZqVNrcy-a2WGz6y5jsL/view?usp=drive_link" alt="Logo" class="logo">
+                <h2>Descrição</h2>
+                <p>A soja é selecionada mediante os melhores métodos de qualidade. Temos nível de acidez, água e óleo do grão!</p>
+            </div>
+
+            <div class="contact-form">
+                <h2>Deseja entrar em contato através do e-mail?</h2>
+                <p>Envie sua mensagem para o e-mail <a href="mailto:oseiasramosrd@gmail.com" style="color: #007bff;"></a>:</p>
+                <form action="mailto:oseiasramosrd@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Enviar</button
+                </form>
+            </div>
+        </div>
+
+        <div class="video-container" id="videoContainer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ihvINydbpzE?autoplay=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            <a href="https://api.whatsapp.com/send/?phone=351961781543&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-link">Chame no WhatsApp!</a>
+        </div>
+    </div>
+
+    <div class="ticker">
+        <div class="ticker-content">
+            <a href="https://www.cnn.com" target="_blank">Última hora: Grandes eventos globais na CNN</a>
+            <a href="https://www.bbc.com/news" target="_blank">BBC: Novidades no mercado financeiro</a>
+            <a href="https://www.reuters.com" target="_blank">Reuters: Acompanhe as principais manchetes do mundo</a>
+            <a href="https://www.aljazeera.com" target="_blank">Al Jazeera: Notícias internacionais de última hora</a>
+            <a href="https://pt.investing.com/commodities/us-soybeans" target="_blank">Última hora: Soja Chicago Futuros</a>
+            Preço da Soja: R$ 2000/t | Preço do Milho: R$ 1000/t | Dólar: R$ 5,00 | Euro: R$ 5,50 | Preço do Café: R$ 4000/saca
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('borderHeight').addEventListener('input', function() {
+            var borderWidth = this.value + 'px';
+            document.getElementById('videoContainer').style.borderWidth = borderWidth;
+        });
+    </script>
+</body>
+</html>
